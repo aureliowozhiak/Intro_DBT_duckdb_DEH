@@ -1,0 +1,13 @@
+curso_dbt_duckdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/app/data/curso_dbt_duckdb.duckdb
+      threads: 1
+      schema: main
+      extensions:
+        - parquet
+        - json
+
+

@@ -1,0 +1,16 @@
+name: "curso_dbt_duckdb"
+version: "1.0.0"
+config-version: 2
+
+profile: "curso_dbt_duckdb"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  curso_dbt_duckdb:
+    +materialized: table
+
+

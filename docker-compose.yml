@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-duckdb:1.8.1
+    container_name: curso_dbt_duckdb
+    working_dir: /usr/app
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/profiles
+    volumes:
+      - ./dbt:/usr/app
+    command: tail -f /dev/null
+
+
