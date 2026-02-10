@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   dbt:
-    image: ghcr.io/dbt-labs/dbt-duckdb:1.8.1
+    build: .
     container_name: curso_dbt_duckdb
     working_dir: /usr/app
     environment:
