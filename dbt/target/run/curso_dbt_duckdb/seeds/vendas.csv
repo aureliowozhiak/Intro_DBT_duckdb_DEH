@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "curso_dbt_duckdb"."main"."vendas";
+    -- dbt seed --
+    
+          COPY "curso_dbt_duckdb"."main"."vendas" FROM '/usr/app/seeds/vendas.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

@@ -1,0 +1,2375 @@
+[0m18:44:36.762023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d008cb610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d008cea90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d00865cd0>]}
+
+
+============================== 18:44:36.778834 | dd0983c3-ff49-46d6-878d-c5fd45e3f8c7 ==============================
+[0m18:44:36.778834 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:44:36.782633 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'static_parser': 'True', 'write_json': 'True', 'log_path': '/usr/app/logs', 'invocation_command': 'dbt seed', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'version_check': 'True', 'empty': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/usr/app/profiles', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'printer_width': '80', 'no_print': 'None', 'log_format': 'default', 'target_path': 'None', 'use_colors': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'fail_fast': 'False'}
+[0m18:44:37.386821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d00bcd6d0>]}
+[0m18:44:37.449143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d037b0d90>]}
+[0m18:44:37.453185 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:44:37.556908 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:44:37.679283 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m18:44:37.682342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d019cead0>]}
+[0m18:44:39.092996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d008c35d0>]}
+[0m18:44:39.232630 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:44:39.248968 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:44:39.344573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cdf796b90>]}
+[0m18:44:39.348770 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:44:39.352083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d00874550>]}
+[0m18:44:39.359052 [info ] [MainThread]: 
+[0m18:44:39.362614 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:44:39.366032 [info ] [MainThread]: 
+[0m18:44:39.369915 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:44:39.386779 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:44:39.502123 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:44:39.506537 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:44:39.511001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:44:42.186331 [debug] [ThreadPool]: SQL status: OK in 2.675 seconds
+[0m18:44:42.191515 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:44:42.203895 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:44:42.208333 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:44:42.230578 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:42.234574 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:44:42.237937 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:44:42.304925 [debug] [ThreadPool]: SQL status: OK in 0.067 seconds
+[0m18:44:42.310687 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:42.313794 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:44:42.318050 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:42.321573 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:42.325133 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:44:42.330348 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:42.335728 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:44:42.339744 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:42.343209 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:44:42.348094 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:42.352291 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:44:42.366714 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:44:42.383173 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:44:42.386667 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:44:42.389984 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:44:42.448473 [debug] [ThreadPool]: SQL status: OK in 0.058 seconds
+[0m18:44:42.452085 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:44:42.455756 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:44:42.488353 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m18:44:42.493420 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:44:42.499332 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:44:42.502467 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:44:42.511327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cf6a7c3d0>]}
+[0m18:44:42.514295 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:42.516610 [debug] [MainThread]: On master: BEGIN
+[0m18:44:42.519360 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:44:42.550981 [debug] [MainThread]: SQL status: OK in 0.032 seconds
+[0m18:44:42.553682 [debug] [MainThread]: On master: COMMIT
+[0m18:44:42.555794 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:42.557408 [debug] [MainThread]: On master: COMMIT
+[0m18:44:42.560293 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:44:42.562235 [debug] [MainThread]: On master: Close
+[0m18:44:42.577656 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.usuarios
+[0m18:44:42.580929 [info ] [Thread-1 (]: 1 of 2 START seed file main.usuarios ........................................... [RUN]
+[0m18:44:42.584255 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.curso_dbt_duckdb.usuarios'
+[0m18:44:42.587165 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.usuarios
+[0m18:44:42.589383 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.usuarios
+[0m18:44:42.641823 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:44:42.643902 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: BEGIN
+[0m18:44:42.645585 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:44:42.678110 [debug] [Thread-1 (]: SQL status: OK in 0.032 seconds
+[0m18:44:42.681340 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:44:42.683805 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.usuarios"} */
+
+    create table "curso_dbt_duckdb"."main"."usuarios" ("id" integer,"nome" text,"email" text,"created_at" timestamp without time zone)
+  
+[0m18:44:42.690151 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:44:42.707588 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:44:42.710306 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: 
+          COPY "curso_dbt_duckdb"."main"."usuarios" FROM '/usr/app/seeds/usuarios.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:44:42.743478 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:44:42.754232 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.usuarios"
+[0m18:44:42.839245 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:44:42.842107 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:44:42.844789 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:44:42.860838 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m18:44:42.867399 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: Close
+[0m18:44:42.924556 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cdf604d50>]}
+[0m18:44:42.927563 [info ] [Thread-1 (]: 1 of 2 OK loaded seed file main.usuarios ....................................... [[32mINSERT 6[0m in 0.34s]
+[0m18:44:42.930604 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.usuarios
+[0m18:44:42.933015 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.vendas
+[0m18:44:42.935199 [info ] [Thread-1 (]: 2 of 2 START seed file main.vendas ............................................. [RUN]
+[0m18:44:42.937558 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.usuarios, now seed.curso_dbt_duckdb.vendas)
+[0m18:44:42.939584 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.vendas
+[0m18:44:42.941943 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.vendas
+[0m18:44:42.958533 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:44:42.960652 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: BEGIN
+[0m18:44:42.962552 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:44:43.004248 [debug] [Thread-1 (]: SQL status: OK in 0.042 seconds
+[0m18:44:43.006612 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:44:43.009380 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.vendas"} */
+
+    create table "curso_dbt_duckdb"."main"."vendas" ("id" integer,"usuario_id" integer,"valor" float8,"data_venda" date)
+  
+[0m18:44:43.012930 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:44:43.015845 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:44:43.017967 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: 
+          COPY "curso_dbt_duckdb"."main"."vendas" FROM '/usr/app/seeds/vendas.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:44:43.040609 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m18:44:43.043654 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.vendas"
+[0m18:44:43.065670 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:44:43.067718 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:44:43.069960 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:44:43.085173 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m18:44:43.089195 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: Close
+[0m18:44:43.143480 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd0983c3-ff49-46d6-878d-c5fd45e3f8c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cf516bd10>]}
+[0m18:44:43.146978 [info ] [Thread-1 (]: 2 of 2 OK loaded seed file main.vendas ......................................... [[32mINSERT 7[0m in 0.21s]
+[0m18:44:43.150458 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.vendas
+[0m18:44:43.155787 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:43.159204 [debug] [MainThread]: On master: BEGIN
+[0m18:44:43.161891 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:44:43.211648 [debug] [MainThread]: SQL status: OK in 0.050 seconds
+[0m18:44:43.214502 [debug] [MainThread]: On master: COMMIT
+[0m18:44:43.216816 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:43.219055 [debug] [MainThread]: On master: COMMIT
+[0m18:44:43.222358 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:44:43.224983 [debug] [MainThread]: On master: Close
+[0m18:44:43.232598 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:44:43.235521 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:44:43.238689 [debug] [MainThread]: Connection 'seed.curso_dbt_duckdb.vendas' was properly closed.
+[0m18:44:43.241991 [info ] [MainThread]: 
+[0m18:44:43.245278 [info ] [MainThread]: Finished running 2 seeds in 0 hours 0 minutes and 3.87 seconds (3.87s).
+[0m18:44:43.250041 [debug] [MainThread]: Command end result
+[0m18:44:43.355366 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:44:43.373868 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:44:43.394358 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:44:43.396560 [info ] [MainThread]: 
+[0m18:44:43.398974 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:44:43.401387 [info ] [MainThread]: 
+[0m18:44:43.403256 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:44:43.407346 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 6.7638125, "process_in_blocks": "171648", "process_kernel_time": 0.91427, "process_mem_max_rss": "304016", "process_out_blocks": "140824", "process_user_time": 4.792704}
+[0m18:44:43.409856 [debug] [MainThread]: Command `dbt seed` succeeded at 18:44:43.409632 after 6.77 seconds
+[0m18:44:43.412087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d00865750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cf516bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d051f46d0>]}
+[0m18:44:43.414024 [debug] [MainThread]: Flushing usage events
+[0m18:44:44.011555 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:44:46.253123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830c129110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830c128790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830bf96d10>]}
+
+
+============================== 18:44:46.259849 | a38d5e0d-aa36-4e08-8fe9-57f246188a34 ==============================
+[0m18:44:46.259849 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:44:46.262297 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'introspect': 'True', 'log_format': 'default', 'write_json': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'log_path': '/usr/app/logs', 'use_colors': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'empty': 'False', 'quiet': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'partial_parse': 'True', 'profiles_dir': '/usr/app/profiles'}
+[0m18:44:46.530750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830bff0250>]}
+[0m18:44:46.596736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830eef1590>]}
+[0m18:44:46.599864 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:44:46.681852 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:44:46.998961 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:44:47.001773 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:44:47.004177 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:44:47.056025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8302125b90>]}
+[0m18:44:47.242154 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:44:47.258206 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:44:47.292588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8302236950>]}
+[0m18:44:47.295645 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:44:47.297557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830225da90>]}
+[0m18:44:47.301405 [info ] [MainThread]: 
+[0m18:44:47.303362 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:44:47.305012 [info ] [MainThread]: 
+[0m18:44:47.307538 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:44:47.316361 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:44:47.361356 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:44:47.363888 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:44:47.366026 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:44:47.419454 [debug] [ThreadPool]: SQL status: OK in 0.053 seconds
+[0m18:44:47.423781 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:44:47.433646 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:44:47.436813 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:44:47.450642 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:47.453562 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:44:47.455820 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:44:47.496280 [debug] [ThreadPool]: SQL status: OK in 0.040 seconds
+[0m18:44:47.500385 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:47.502500 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:44:47.505130 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:47.507150 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:47.509073 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:44:47.512884 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:47.516574 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:44:47.519236 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:44:47.522026 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:44:47.525079 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:44:47.527305 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:44:47.536053 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:44:47.546973 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:44:47.549607 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:44:47.551712 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:44:47.592175 [debug] [ThreadPool]: SQL status: OK in 0.040 seconds
+[0m18:44:47.595082 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:44:47.597461 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:44:47.613049 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m18:44:47.617475 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:44:47.620724 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:44:47.623615 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:44:47.631616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830eb6c710>]}
+[0m18:44:47.634819 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:47.637085 [debug] [MainThread]: On master: BEGIN
+[0m18:44:47.639316 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:44:47.680642 [debug] [MainThread]: SQL status: OK in 0.041 seconds
+[0m18:44:47.683567 [debug] [MainThread]: On master: COMMIT
+[0m18:44:47.685781 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:47.688067 [debug] [MainThread]: On master: COMMIT
+[0m18:44:47.690613 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:44:47.693085 [debug] [MainThread]: On master: Close
+[0m18:44:47.703527 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.01_hello_world
+[0m18:44:47.707222 [info ] [Thread-1 (]: 1 of 4 START sql table model main.01_hello_world ............................... [RUN]
+[0m18:44:47.711082 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:44:47.713842 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.01_hello_world
+[0m18:44:47.727381 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:44:47.766105 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.01_hello_world
+[0m18:44:47.870839 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:44:47.900939 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:44:47.903085 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: BEGIN
+[0m18:44:47.905594 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:44:47.963061 [debug] [Thread-1 (]: SQL status: OK in 0.057 seconds
+[0m18:44:47.966037 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:44:47.968369 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at;
+    );
+  
+  
+[0m18:44:47.985611 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at;
+    );
+  
+  
+[0m18:44:47.988865 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:44:47.991959 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: ROLLBACK
+[0m18:44:48.015893 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:44:48.019474 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: Close
+[0m18:44:48.033058 [debug] [Thread-1 (]: Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^
+[0m18:44:48.039146 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830c03ed10>]}
+[0m18:44:48.043316 [error] [Thread-1 (]: 1 of 4 ERROR creating sql table model main.01_hello_world ...................... [[31mERROR[0m in 0.33s]
+[0m18:44:48.046988 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.01_hello_world
+[0m18:44:48.050551 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:44:48.051796 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.01_hello_world' to be skipped because of status 'error'.  Reason: Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^.
+[0m18:44:48.055095 [info ] [Thread-1 (]: 2 of 4 START sql table model main.stg_usuarios ................................. [RUN]
+[0m18:44:48.063093 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.01_hello_world, now model.curso_dbt_duckdb.stg_usuarios)
+[0m18:44:48.066971 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_usuarios
+[0m18:44:48.076759 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:44:48.108126 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_usuarios
+[0m18:44:48.115693 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:44:48.130725 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:44:48.132368 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: BEGIN
+[0m18:44:48.133530 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:44:48.156584 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m18:44:48.158738 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:44:48.160666 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null;
+    );
+  
+  
+[0m18:44:48.163371 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null;
+    );
+  
+  
+[0m18:44:48.164792 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:44:48.166708 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: ROLLBACK
+[0m18:44:48.169734 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.stg_usuarios'
+[0m18:44:48.171371 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: Close
+[0m18:44:48.177945 [debug] [Thread-1 (]: Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^
+[0m18:44:48.180231 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830c207a50>]}
+[0m18:44:48.182252 [error] [Thread-1 (]: 2 of 4 ERROR creating sql table model main.stg_usuarios ........................ [[31mERROR[0m in 0.12s]
+[0m18:44:48.184131 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:44:48.186149 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_vendas
+[0m18:44:48.186946 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.stg_usuarios' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^.
+[0m18:44:48.188293 [info ] [Thread-1 (]: 3 of 4 START sql table model main.stg_vendas ................................... [RUN]
+[0m18:44:48.190553 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_usuarios, now model.curso_dbt_duckdb.stg_vendas)
+[0m18:44:48.191748 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_vendas
+[0m18:44:48.196024 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:44:48.205891 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_vendas
+[0m18:44:48.210233 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:44:48.220209 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:44:48.221645 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: BEGIN
+[0m18:44:48.222719 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:44:48.242134 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m18:44:48.243721 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:44:48.244967 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas";
+    );
+  
+  
+[0m18:44:48.246603 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas";
+    );
+  
+  
+[0m18:44:48.247800 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:44:48.249219 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: ROLLBACK
+[0m18:44:48.252756 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.stg_vendas'
+[0m18:44:48.254079 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: Close
+[0m18:44:48.260638 [debug] [Thread-1 (]: Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^
+[0m18:44:48.262220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a38d5e0d-aa36-4e08-8fe9-57f246188a34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f830c0616d0>]}
+[0m18:44:48.263778 [error] [Thread-1 (]: 3 of 4 ERROR creating sql table model main.stg_vendas .......................... [[31mERROR[0m in 0.07s]
+[0m18:44:48.266057 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_vendas
+[0m18:44:48.267946 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.stg_vendas' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^.
+[0m18:44:48.271246 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:44:48.273187 [info ] [Thread-1 (]: 4 of 4 SKIP relation main.fct_vendas_por_usuario ............................... [[33mSKIP[0m]
+[0m18:44:48.275215 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:44:48.278390 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:48.280168 [debug] [MainThread]: On master: BEGIN
+[0m18:44:48.281557 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:44:48.303128 [debug] [MainThread]: SQL status: OK in 0.022 seconds
+[0m18:44:48.304932 [debug] [MainThread]: On master: COMMIT
+[0m18:44:48.306557 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:44:48.308202 [debug] [MainThread]: On master: COMMIT
+[0m18:44:48.309858 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:44:48.311144 [debug] [MainThread]: On master: Close
+[0m18:44:48.315531 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:44:48.317490 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:44:48.319165 [debug] [MainThread]: Connection 'model.curso_dbt_duckdb.stg_vendas' was properly closed.
+[0m18:44:48.320611 [info ] [MainThread]: 
+[0m18:44:48.322429 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 1.01 seconds (1.01s).
+[0m18:44:48.324936 [debug] [MainThread]: Command end result
+[0m18:44:48.366760 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:44:48.373895 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:44:48.385152 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:44:48.386691 [info ] [MainThread]: 
+[0m18:44:48.387952 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m18:44:48.389114 [info ] [MainThread]: 
+[0m18:44:48.390270 [error] [MainThread]: [31mFailure in model 01_hello_world (models/01_hello_world.sql)[0m
+[0m18:44:48.391520 [error] [MainThread]:   Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^
+[0m18:44:48.392881 [info ] [MainThread]: 
+[0m18:44:48.394472 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/01_hello_world.sql
+[0m18:44:48.396070 [info ] [MainThread]: 
+[0m18:44:48.397942 [error] [MainThread]: [31mFailure in model stg_usuarios (models/staging/stg_usuarios.sql)[0m
+[0m18:44:48.400112 [error] [MainThread]:   Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^
+[0m18:44:48.401774 [info ] [MainThread]: 
+[0m18:44:48.403688 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/staging/stg_usuarios.sql
+[0m18:44:48.405383 [info ] [MainThread]: 
+[0m18:44:48.407627 [error] [MainThread]: [31mFailure in model stg_vendas (models/staging/stg_vendas.sql)[0m
+[0m18:44:48.410238 [error] [MainThread]:   Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^
+[0m18:44:48.413215 [info ] [MainThread]: 
+[0m18:44:48.415328 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/staging/stg_vendas.sql
+[0m18:44:48.417539 [info ] [MainThread]: 
+[0m18:44:48.419244 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=1 NO-OP=0 TOTAL=4
+[0m18:44:48.421788 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.2895622, "process_in_blocks": "8392", "process_kernel_time": 0.317845, "process_mem_max_rss": "192880", "process_out_blocks": "0", "process_user_time": 2.735398}
+[0m18:44:48.423915 [debug] [MainThread]: Command `dbt run` failed at 18:44:48.423525 after 2.29 seconds
+[0m18:44:48.425900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8310939150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f82f3c72d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f82f3d40e50>]}
+[0m18:44:48.429124 [debug] [MainThread]: Flushing usage events
+[0m18:44:49.006713 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:49:33.814583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f70476bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f707c1850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f704dee90>]}
+
+
+============================== 18:49:33.826430 | 757480db-1338-4297-879e-c09678223aab ==============================
+[0m18:49:33.826430 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:49:33.828276 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'log_path': '/usr/app/logs', 'log_cache_events': 'False', 'write_json': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'quiet': 'False', 'static_parser': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/usr/app/profiles', 'version_check': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'partial_parse': 'True', 'invocation_command': 'dbt seed', 'target_path': 'None'}
+[0m18:49:34.259054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f70475d50>]}
+[0m18:49:34.335041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f66846610>]}
+[0m18:49:34.338807 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:49:34.432812 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:49:35.059825 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:49:35.063910 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:49:35.067354 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:49:35.127757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f667f0550>]}
+[0m18:49:35.258252 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:49:35.274683 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:49:35.337581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f7035ab10>]}
+[0m18:49:35.339918 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:49:35.341968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f66785ed0>]}
+[0m18:49:35.346650 [info ] [MainThread]: 
+[0m18:49:35.349375 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:49:35.351213 [info ] [MainThread]: 
+[0m18:49:35.353533 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:49:35.363913 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:49:35.441108 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:49:35.443358 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:49:35.445638 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:49:37.702608 [debug] [ThreadPool]: SQL status: OK in 2.257 seconds
+[0m18:49:37.706808 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:49:37.717357 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:49:37.720596 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:49:37.734821 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:37.738008 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:49:37.740306 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:49:37.799162 [debug] [ThreadPool]: SQL status: OK in 0.059 seconds
+[0m18:49:37.803541 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:37.806400 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:49:37.810041 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:49:37.812319 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:37.814679 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:49:37.817144 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:49:37.820583 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:49:37.823570 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:37.825734 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:49:37.828799 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:49:37.830639 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:49:37.840301 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:49:37.851178 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:49:37.854510 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:49:37.857410 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:49:37.889664 [debug] [ThreadPool]: SQL status: OK in 0.032 seconds
+[0m18:49:37.892169 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:49:37.894526 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:49:37.908778 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m18:49:37.912054 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:49:37.916532 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:49:37.919042 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:49:37.925643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f6699a5d0>]}
+[0m18:49:37.928078 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:37.930422 [debug] [MainThread]: On master: BEGIN
+[0m18:49:37.932779 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:49:37.995404 [debug] [MainThread]: SQL status: OK in 0.062 seconds
+[0m18:49:37.998763 [debug] [MainThread]: On master: COMMIT
+[0m18:49:38.001461 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:38.004657 [debug] [MainThread]: On master: COMMIT
+[0m18:49:38.008137 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:49:38.010965 [debug] [MainThread]: On master: Close
+[0m18:49:38.030190 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.usuarios
+[0m18:49:38.033319 [info ] [Thread-1 (]: 1 of 2 START seed file main.usuarios ........................................... [RUN]
+[0m18:49:38.036754 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.curso_dbt_duckdb.usuarios'
+[0m18:49:38.039323 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.usuarios
+[0m18:49:38.042066 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.usuarios
+[0m18:49:38.193466 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:49:38.196338 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: BEGIN
+[0m18:49:38.199183 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:49:38.252048 [debug] [Thread-1 (]: SQL status: OK in 0.053 seconds
+[0m18:49:38.255035 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:49:38.257281 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.usuarios"} */
+truncate table "curso_dbt_duckdb"."main"."usuarios"
+[0m18:49:38.261845 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:49:38.277562 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:49:38.280345 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: 
+          COPY "curso_dbt_duckdb"."main"."usuarios" FROM '/usr/app/seeds/usuarios.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:49:38.314082 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:49:38.325444 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.usuarios"
+[0m18:49:38.375486 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:49:38.377994 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:49:38.380422 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:49:38.398590 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m18:49:38.403097 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: Close
+[0m18:49:38.469914 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f66787b90>]}
+[0m18:49:38.473170 [info ] [Thread-1 (]: 1 of 2 OK loaded seed file main.usuarios ....................................... [[32mINSERT 6[0m in 0.43s]
+[0m18:49:38.476502 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.usuarios
+[0m18:49:38.479425 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.vendas
+[0m18:49:38.482372 [info ] [Thread-1 (]: 2 of 2 START seed file main.vendas ............................................. [RUN]
+[0m18:49:38.485234 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.usuarios, now seed.curso_dbt_duckdb.vendas)
+[0m18:49:38.489212 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.vendas
+[0m18:49:38.492917 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.vendas
+[0m18:49:38.518564 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:49:38.520930 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: BEGIN
+[0m18:49:38.523702 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:49:38.565587 [debug] [Thread-1 (]: SQL status: OK in 0.042 seconds
+[0m18:49:38.568244 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:49:38.570975 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.vendas"} */
+truncate table "curso_dbt_duckdb"."main"."vendas"
+[0m18:49:38.575062 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:49:38.579282 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:49:38.582137 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: 
+          COPY "curso_dbt_duckdb"."main"."vendas" FROM '/usr/app/seeds/vendas.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:49:38.606706 [debug] [Thread-1 (]: SQL status: OK in 0.022 seconds
+[0m18:49:38.609694 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.vendas"
+[0m18:49:38.631510 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:49:38.634212 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:49:38.636626 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:49:38.650116 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m18:49:38.654152 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: Close
+[0m18:49:38.702210 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '757480db-1338-4297-879e-c09678223aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f70aa3b50>]}
+[0m18:49:38.705408 [info ] [Thread-1 (]: 2 of 2 OK loaded seed file main.vendas ......................................... [[32mINSERT 7[0m in 0.22s]
+[0m18:49:38.708168 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.vendas
+[0m18:49:38.712626 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:38.715812 [debug] [MainThread]: On master: BEGIN
+[0m18:49:38.718112 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:49:38.763014 [debug] [MainThread]: SQL status: OK in 0.045 seconds
+[0m18:49:38.765559 [debug] [MainThread]: On master: COMMIT
+[0m18:49:38.768073 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:38.770271 [debug] [MainThread]: On master: COMMIT
+[0m18:49:38.773787 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:49:38.776626 [debug] [MainThread]: On master: Close
+[0m18:49:38.783479 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:49:38.785674 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:49:38.787415 [debug] [MainThread]: Connection 'seed.curso_dbt_duckdb.vendas' was properly closed.
+[0m18:49:38.789422 [info ] [MainThread]: 
+[0m18:49:38.792189 [info ] [MainThread]: Finished running 2 seeds in 0 hours 0 minutes and 3.44 seconds (3.44s).
+[0m18:49:38.795361 [debug] [MainThread]: Command end result
+[0m18:49:38.866067 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:49:38.879977 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:49:38.899737 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:49:38.902323 [info ] [MainThread]: 
+[0m18:49:38.904659 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:49:38.906942 [info ] [MainThread]: 
+[0m18:49:38.909431 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:49:38.914245 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 5.193511, "process_in_blocks": "170400", "process_kernel_time": 0.867111, "process_mem_max_rss": "310192", "process_out_blocks": "140824", "process_user_time": 4.621307}
+[0m18:49:38.916181 [debug] [MainThread]: Command `dbt seed` succeeded at 18:49:38.915963 after 5.20 seconds
+[0m18:49:38.917859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f74e11250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f74e10690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9f721db610>]}
+[0m18:49:38.919897 [debug] [MainThread]: Flushing usage events
+[0m18:49:39.575327 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:49:41.513021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2daac110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2daa5350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2daa51d0>]}
+
+
+============================== 18:49:41.519578 | 8f1b063d-32f8-4290-a1b5-179ba34f9784 ==============================
+[0m18:49:41.519578 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:49:41.522021 [debug] [MainThread]: running dbt with arguments {'log_path': '/usr/app/logs', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'use_colors': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'profiles_dir': '/usr/app/profiles', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'write_json': 'True'}
+[0m18:49:41.781264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c23f0ef50>]}
+[0m18:49:41.851637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c30a325d0>]}
+[0m18:49:41.853871 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:49:41.915076 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:49:42.221601 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:49:42.223163 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:49:42.225370 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:49:42.272709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2dabe5d0>]}
+[0m18:49:42.403765 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:49:42.413846 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:49:42.442732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2db6c0d0>]}
+[0m18:49:42.445033 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:49:42.446953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c23d5fa10>]}
+[0m18:49:42.451451 [info ] [MainThread]: 
+[0m18:49:42.453517 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:49:42.455215 [info ] [MainThread]: 
+[0m18:49:42.457235 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:49:42.469782 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:49:42.518155 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:49:42.520557 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:49:42.522565 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:49:42.567692 [debug] [ThreadPool]: SQL status: OK in 0.045 seconds
+[0m18:49:42.570822 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:49:42.576483 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:49:42.578197 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:49:42.586905 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:42.588525 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:49:42.590087 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:49:42.610503 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m18:49:42.614102 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:42.615555 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:49:42.616863 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:49:42.617568 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:42.618534 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:49:42.620188 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:49:42.621731 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:49:42.622725 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:49:42.623805 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:49:42.625267 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:49:42.626261 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:49:42.631290 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:49:42.637705 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:49:42.639256 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:49:42.640611 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:49:42.663013 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m18:49:42.664789 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:49:42.666262 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:49:42.682280 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m18:49:42.686875 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:49:42.689348 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:49:42.691069 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:49:42.697668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c23b6c790>]}
+[0m18:49:42.699521 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:42.701002 [debug] [MainThread]: On master: BEGIN
+[0m18:49:42.702210 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:49:42.727515 [debug] [MainThread]: SQL status: OK in 0.025 seconds
+[0m18:49:42.730064 [debug] [MainThread]: On master: COMMIT
+[0m18:49:42.732216 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:42.733815 [debug] [MainThread]: On master: COMMIT
+[0m18:49:42.735935 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:49:42.737406 [debug] [MainThread]: On master: Close
+[0m18:49:42.744774 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.01_hello_world
+[0m18:49:42.746372 [info ] [Thread-1 (]: 1 of 4 START sql table model main.01_hello_world ............................... [RUN]
+[0m18:49:42.748417 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:49:42.749647 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.01_hello_world
+[0m18:49:42.757282 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:49:42.767896 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.01_hello_world
+[0m18:49:42.899856 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:49:42.919064 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:49:42.921178 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: BEGIN
+[0m18:49:42.923805 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:49:42.965633 [debug] [Thread-1 (]: SQL status: OK in 0.042 seconds
+[0m18:49:42.968077 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:49:42.970356 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at;
+    );
+  
+  
+[0m18:49:42.984867 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at;
+    );
+  
+  
+[0m18:49:42.987503 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:49:42.989799 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: ROLLBACK
+[0m18:49:43.005954 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:49:43.008689 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: Close
+[0m18:49:43.019443 [debug] [Thread-1 (]: Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^
+[0m18:49:43.024240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c23dbd690>]}
+[0m18:49:43.026845 [error] [Thread-1 (]: 1 of 4 ERROR creating sql table model main.01_hello_world ...................... [[31mERROR[0m in 0.27s]
+[0m18:49:43.029848 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.01_hello_world
+[0m18:49:43.032572 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:49:43.033879 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.01_hello_world' to be skipped because of status 'error'.  Reason: Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^.
+[0m18:49:43.035913 [info ] [Thread-1 (]: 2 of 4 START sql table model main.stg_usuarios ................................. [RUN]
+[0m18:49:43.041201 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.01_hello_world, now model.curso_dbt_duckdb.stg_usuarios)
+[0m18:49:43.044120 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_usuarios
+[0m18:49:43.052977 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:49:43.075740 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_usuarios
+[0m18:49:43.083866 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:49:43.105557 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:49:43.108075 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: BEGIN
+[0m18:49:43.110620 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:49:43.170695 [debug] [Thread-1 (]: SQL status: OK in 0.060 seconds
+[0m18:49:43.174629 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:49:43.178179 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null;
+    );
+  
+  
+[0m18:49:43.181471 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null;
+    );
+  
+  
+[0m18:49:43.184075 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:49:43.187337 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: ROLLBACK
+[0m18:49:43.192471 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.stg_usuarios'
+[0m18:49:43.195016 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: Close
+[0m18:49:43.205028 [debug] [Thread-1 (]: Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^
+[0m18:49:43.207502 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2eec76d0>]}
+[0m18:49:43.210216 [error] [Thread-1 (]: 2 of 4 ERROR creating sql table model main.stg_usuarios ........................ [[31mERROR[0m in 0.17s]
+[0m18:49:43.213783 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:49:43.216350 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_vendas
+[0m18:49:43.217077 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.stg_usuarios' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^.
+[0m18:49:43.219079 [info ] [Thread-1 (]: 3 of 4 START sql table model main.stg_vendas ................................... [RUN]
+[0m18:49:43.225395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_usuarios, now model.curso_dbt_duckdb.stg_vendas)
+[0m18:49:43.227979 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_vendas
+[0m18:49:43.234454 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:49:43.260797 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_vendas
+[0m18:49:43.267498 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:49:43.292335 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:49:43.294353 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: BEGIN
+[0m18:49:43.296854 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:49:43.340417 [debug] [Thread-1 (]: SQL status: OK in 0.043 seconds
+[0m18:49:43.343408 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:49:43.345736 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas";
+    );
+  
+  
+[0m18:49:43.348592 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas";
+    );
+  
+  
+[0m18:49:43.351059 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:49:43.353463 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: ROLLBACK
+[0m18:49:43.358645 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.stg_vendas'
+[0m18:49:43.361363 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: Close
+[0m18:49:43.374371 [debug] [Thread-1 (]: Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^
+[0m18:49:43.377781 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f1b063d-32f8-4290-a1b5-179ba34f9784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2187b910>]}
+[0m18:49:43.381166 [error] [Thread-1 (]: 3 of 4 ERROR creating sql table model main.stg_vendas .......................... [[31mERROR[0m in 0.15s]
+[0m18:49:43.384644 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_vendas
+[0m18:49:43.388251 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.stg_vendas' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^.
+[0m18:49:43.391950 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:49:43.395110 [info ] [Thread-1 (]: 4 of 4 SKIP relation main.fct_vendas_por_usuario ............................... [[33mSKIP[0m]
+[0m18:49:43.398342 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:49:43.403931 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:43.407240 [debug] [MainThread]: On master: BEGIN
+[0m18:49:43.409894 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:49:43.456358 [debug] [MainThread]: SQL status: OK in 0.046 seconds
+[0m18:49:43.459157 [debug] [MainThread]: On master: COMMIT
+[0m18:49:43.461350 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:49:43.463712 [debug] [MainThread]: On master: COMMIT
+[0m18:49:43.467072 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:49:43.469540 [debug] [MainThread]: On master: Close
+[0m18:49:43.477361 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:49:43.480184 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:49:43.482814 [debug] [MainThread]: Connection 'model.curso_dbt_duckdb.stg_vendas' was properly closed.
+[0m18:49:43.485951 [info ] [MainThread]: 
+[0m18:49:43.488939 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 1.03 seconds (1.03s).
+[0m18:49:43.492863 [debug] [MainThread]: Command end result
+[0m18:49:43.574266 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:49:43.587872 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:49:43.605534 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:49:43.607881 [info ] [MainThread]: 
+[0m18:49:43.610033 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m18:49:43.612372 [info ] [MainThread]: 
+[0m18:49:43.614903 [error] [MainThread]: [31mFailure in model 01_hello_world (models/01_hello_world.sql)[0m
+[0m18:49:43.617010 [error] [MainThread]:   Runtime Error in model 01_hello_world (models/01_hello_world.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 13:   current_timestamp as created_at;
+                                            ^
+[0m18:49:43.619530 [info ] [MainThread]: 
+[0m18:49:43.622085 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/01_hello_world.sql
+[0m18:49:43.624049 [info ] [MainThread]: 
+[0m18:49:43.626297 [error] [MainThread]: [31mFailure in model stg_usuarios (models/staging/stg_usuarios.sql)[0m
+[0m18:49:43.628808 [error] [MainThread]:   Runtime Error in model stg_usuarios (models/staging/stg_usuarios.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 17: where email is not null;
+                                  ^
+[0m18:49:43.631040 [info ] [MainThread]: 
+[0m18:49:43.633774 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/staging/stg_usuarios.sql
+[0m18:49:43.636787 [info ] [MainThread]: 
+[0m18:49:43.639761 [error] [MainThread]: [31mFailure in model stg_vendas (models/staging/stg_vendas.sql)[0m
+[0m18:49:43.642546 [error] [MainThread]:   Runtime Error in model stg_vendas (models/staging/stg_vendas.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 16: from "curso_dbt_duckdb"."main"."vendas";
+                                                  ^
+[0m18:49:43.645411 [info ] [MainThread]: 
+[0m18:49:43.647931 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/staging/stg_vendas.sql
+[0m18:49:43.650553 [info ] [MainThread]: 
+[0m18:49:43.652593 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=1 NO-OP=0 TOTAL=4
+[0m18:49:43.655033 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.2567356, "process_in_blocks": "7568", "process_kernel_time": 0.308579, "process_mem_max_rss": "190068", "process_out_blocks": "0", "process_user_time": 2.488541}
+[0m18:49:43.657425 [debug] [MainThread]: Command `dbt run` failed at 18:49:43.657237 after 2.26 seconds
+[0m18:49:43.659219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c22365410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2dbe1810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c2234b350>]}
+[0m18:49:43.661550 [debug] [MainThread]: Flushing usage events
+[0m18:49:44.219314 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:52:34.107334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e382f0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e37c9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e37cac50>]}
+
+
+============================== 18:52:34.122613 | ea886d17-9bed-4bcb-9296-8a11501846d6 ==============================
+[0m18:52:34.122613 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:52:34.126436 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'target_path': 'None', 'quiet': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'empty': 'None', 'printer_width': '80', 'static_parser': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'profiles_dir': '/usr/app/profiles', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'log_cache_events': 'False', 'log_format': 'default', 'warn_error': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt seed'}
+[0m18:52:34.676421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e36d0950>]}
+[0m18:52:34.744123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e672e710>]}
+[0m18:52:34.747745 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:52:34.828954 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:52:35.099970 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m18:52:35.102519 [debug] [MainThread]: Partial parsing: updated file: curso_dbt_duckdb://models/staging/stg_usuarios.sql
+[0m18:52:35.104275 [debug] [MainThread]: Partial parsing: updated file: curso_dbt_duckdb://models/01_hello_world.sql
+[0m18:52:35.106081 [debug] [MainThread]: Partial parsing: updated file: curso_dbt_duckdb://models/staging/stg_vendas.sql
+[0m18:52:35.386058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d9adb950>]}
+[0m18:52:35.557038 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:52:35.572995 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:52:35.700442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e391c2d0>]}
+[0m18:52:35.702837 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:52:35.705351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e6e5c990>]}
+[0m18:52:35.710018 [info ] [MainThread]: 
+[0m18:52:35.712678 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:52:35.715200 [info ] [MainThread]: 
+[0m18:52:35.717889 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:52:35.728381 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:52:35.791199 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:52:35.793800 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:52:35.796154 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:52:38.307502 [debug] [ThreadPool]: SQL status: OK in 2.511 seconds
+[0m18:52:38.311324 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:52:38.321209 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:52:38.324224 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:52:38.340502 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:38.344342 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:52:38.348041 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:52:38.421371 [debug] [ThreadPool]: SQL status: OK in 0.073 seconds
+[0m18:52:38.427219 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:38.431459 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:52:38.436392 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:38.440279 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:38.444284 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:52:38.449565 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:38.454959 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:52:38.459077 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:38.462479 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:52:38.467582 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:38.470696 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:52:38.484898 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:52:38.502565 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:52:38.505840 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:52:38.508778 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:52:38.561322 [debug] [ThreadPool]: SQL status: OK in 0.052 seconds
+[0m18:52:38.564662 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:52:38.567482 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:52:38.588233 [debug] [ThreadPool]: SQL status: OK in 0.018 seconds
+[0m18:52:38.592243 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:52:38.596665 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:52:38.599213 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:52:38.608968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d80e7ad0>]}
+[0m18:52:38.611764 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:38.614641 [debug] [MainThread]: On master: BEGIN
+[0m18:52:38.617097 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:52:38.686236 [debug] [MainThread]: SQL status: OK in 0.069 seconds
+[0m18:52:38.689380 [debug] [MainThread]: On master: COMMIT
+[0m18:52:38.692485 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:38.695491 [debug] [MainThread]: On master: COMMIT
+[0m18:52:38.699713 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:52:38.703283 [debug] [MainThread]: On master: Close
+[0m18:52:38.732157 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.usuarios
+[0m18:52:38.736783 [info ] [Thread-1 (]: 1 of 2 START seed file main.usuarios ........................................... [RUN]
+[0m18:52:38.741578 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.curso_dbt_duckdb.usuarios'
+[0m18:52:38.746060 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.usuarios
+[0m18:52:38.750205 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.usuarios
+[0m18:52:38.814660 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:52:38.817093 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: BEGIN
+[0m18:52:38.819365 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:52:38.859317 [debug] [Thread-1 (]: SQL status: OK in 0.040 seconds
+[0m18:52:38.861757 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:52:38.864625 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.usuarios"} */
+truncate table "curso_dbt_duckdb"."main"."usuarios"
+[0m18:52:38.868952 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:52:38.886987 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:52:38.890297 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: 
+          COPY "curso_dbt_duckdb"."main"."usuarios" FROM '/usr/app/seeds/usuarios.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:52:38.917257 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m18:52:38.924301 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.usuarios"
+[0m18:52:38.953087 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:52:38.955210 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:52:38.956682 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:52:38.968868 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m18:52:38.972678 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: Close
+[0m18:52:39.001090 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d80a3e50>]}
+[0m18:52:39.002884 [info ] [Thread-1 (]: 1 of 2 OK loaded seed file main.usuarios ....................................... [[32mINSERT 6[0m in 0.26s]
+[0m18:52:39.005060 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.usuarios
+[0m18:52:39.006744 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.vendas
+[0m18:52:39.008197 [info ] [Thread-1 (]: 2 of 2 START seed file main.vendas ............................................. [RUN]
+[0m18:52:39.009763 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.usuarios, now seed.curso_dbt_duckdb.vendas)
+[0m18:52:39.011470 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.vendas
+[0m18:52:39.013291 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.vendas
+[0m18:52:39.028827 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:52:39.031671 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: BEGIN
+[0m18:52:39.033254 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:52:39.052735 [debug] [Thread-1 (]: SQL status: OK in 0.020 seconds
+[0m18:52:39.055120 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:52:39.056437 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.vendas"} */
+truncate table "curso_dbt_duckdb"."main"."vendas"
+[0m18:52:39.058380 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:39.060469 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:52:39.061380 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: 
+          COPY "curso_dbt_duckdb"."main"."vendas" FROM '/usr/app/seeds/vendas.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:52:39.073500 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m18:52:39.075315 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.vendas"
+[0m18:52:39.083449 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:52:39.085116 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:52:39.086393 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:52:39.093966 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m18:52:39.095543 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: Close
+[0m18:52:39.113735 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea886d17-9bed-4bcb-9296-8a11501846d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d9ab8e50>]}
+[0m18:52:39.115471 [info ] [Thread-1 (]: 2 of 2 OK loaded seed file main.vendas ......................................... [[32mINSERT 7[0m in 0.10s]
+[0m18:52:39.117112 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.vendas
+[0m18:52:39.119654 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:39.120794 [debug] [MainThread]: On master: BEGIN
+[0m18:52:39.121694 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:52:39.140963 [debug] [MainThread]: SQL status: OK in 0.019 seconds
+[0m18:52:39.142384 [debug] [MainThread]: On master: COMMIT
+[0m18:52:39.143718 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:39.144547 [debug] [MainThread]: On master: COMMIT
+[0m18:52:39.145962 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:52:39.147076 [debug] [MainThread]: On master: Close
+[0m18:52:39.151161 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:52:39.152340 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:52:39.153170 [debug] [MainThread]: Connection 'seed.curso_dbt_duckdb.vendas' was properly closed.
+[0m18:52:39.154207 [info ] [MainThread]: 
+[0m18:52:39.155246 [info ] [MainThread]: Finished running 2 seeds in 0 hours 0 minutes and 3.44 seconds (3.44s).
+[0m18:52:39.156688 [debug] [MainThread]: Command end result
+[0m18:52:39.192384 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:52:39.198133 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:52:39.209301 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:52:39.210497 [info ] [MainThread]: 
+[0m18:52:39.212314 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:52:39.214684 [info ] [MainThread]: 
+[0m18:52:39.216597 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:52:39.220265 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 5.221492, "process_in_blocks": "170968", "process_kernel_time": 0.759713, "process_mem_max_rss": "303648", "process_out_blocks": "140824", "process_user_time": 3.843789}
+[0m18:52:39.222311 [debug] [MainThread]: Command `dbt seed` succeeded at 18:52:39.222095 after 5.22 seconds
+[0m18:52:39.224100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e37c2450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e382ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4e382e710>]}
+[0m18:52:39.225742 [debug] [MainThread]: Flushing usage events
+[0m18:52:39.867273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:52:41.862468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a86f8cb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a871c4910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a86f24610>]}
+
+
+============================== 18:52:41.870992 | d8401f78-f9f2-40ef-941b-e6fd84d043c4 ==============================
+[0m18:52:41.870992 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:52:41.874113 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'debug': 'False', 'target_path': 'None', 'introspect': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt run', 'no_print': 'None', 'profiles_dir': '/usr/app/profiles', 'printer_width': '80', 'write_json': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'version_check': 'True', 'empty': 'False', 'quiet': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/usr/app/logs', 'indirect_selection': 'eager'}
+[0m18:52:42.177581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a7d5e5010>]}
+[0m18:52:42.260064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a89ed4150>]}
+[0m18:52:42.262970 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:52:42.349236 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:52:42.580862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:52:42.582819 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:52:42.584968 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:52:42.655490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a7d15c5d0>]}
+[0m18:52:42.770434 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:52:42.786100 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:52:42.821940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a7d437250>]}
+[0m18:52:42.824509 [info ] [MainThread]: Found 4 models, 2 seeds, 455 macros
+[0m18:52:42.826293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a88e5ac10>]}
+[0m18:52:42.830319 [info ] [MainThread]: 
+[0m18:52:42.832760 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:52:42.834889 [info ] [MainThread]: 
+[0m18:52:42.838288 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:52:42.848104 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:52:42.891968 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:52:42.895094 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:52:42.898140 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:52:42.953830 [debug] [ThreadPool]: SQL status: OK in 0.056 seconds
+[0m18:52:42.957659 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:52:42.970134 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:52:42.973948 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:52:42.989406 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:42.992381 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:52:42.995182 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:52:43.044892 [debug] [ThreadPool]: SQL status: OK in 0.050 seconds
+[0m18:52:43.050360 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:43.053263 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:52:43.056513 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:43.058807 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:43.061179 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:52:43.064776 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:43.068242 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:52:43.071250 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:52:43.073742 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:52:43.076691 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:52:43.079142 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:52:43.089010 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:52:43.096404 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:52:43.098745 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:52:43.102096 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:52:43.143567 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m18:52:43.145663 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:52:43.147024 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:52:43.159428 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m18:52:43.162856 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:52:43.164767 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:52:43.166228 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:52:43.174193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a7d513310>]}
+[0m18:52:43.176963 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:43.179175 [debug] [MainThread]: On master: BEGIN
+[0m18:52:43.180847 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:52:43.226647 [debug] [MainThread]: SQL status: OK in 0.046 seconds
+[0m18:52:43.228680 [debug] [MainThread]: On master: COMMIT
+[0m18:52:43.230489 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:43.232564 [debug] [MainThread]: On master: COMMIT
+[0m18:52:43.236430 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:52:43.238544 [debug] [MainThread]: On master: Close
+[0m18:52:43.248256 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.01_hello_world
+[0m18:52:43.250675 [info ] [Thread-1 (]: 1 of 4 START sql table model main.01_hello_world ............................... [RUN]
+[0m18:52:43.252869 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:52:43.254729 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.01_hello_world
+[0m18:52:43.263535 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.270671 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.01_hello_world
+[0m18:52:43.382349 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.393144 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.394255 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: BEGIN
+[0m18:52:43.395189 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:52:43.418757 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m18:52:43.420542 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.422335 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at
+    );
+  
+  
+[0m18:52:43.426809 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:52:43.436013 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.439315 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+alter table "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp" rename to "01_hello_world"
+[0m18:52:43.443250 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.463990 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: COMMIT
+[0m18:52:43.466369 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.468590 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: COMMIT
+[0m18:52:43.483242 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m18:52:43.492182 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:52:43.495295 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+drop table if exists "curso_dbt_duckdb"."main"."01_hello_world__dbt_backup" cascade
+[0m18:52:43.499240 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.506202 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: Close
+[0m18:52:43.561919 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a7d425450>]}
+[0m18:52:43.565890 [info ] [Thread-1 (]: 1 of 4 OK created sql table model main.01_hello_world .......................... [[32mOK[0m in 0.31s]
+[0m18:52:43.569342 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.01_hello_world
+[0m18:52:43.572597 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:52:43.575979 [info ] [Thread-1 (]: 2 of 4 START sql table model main.stg_usuarios ................................. [RUN]
+[0m18:52:43.579251 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.01_hello_world, now model.curso_dbt_duckdb.stg_usuarios)
+[0m18:52:43.581918 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_usuarios
+[0m18:52:43.590769 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.608369 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_usuarios
+[0m18:52:43.614868 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.641463 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.644606 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: BEGIN
+[0m18:52:43.646870 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:52:43.692709 [debug] [Thread-1 (]: SQL status: OK in 0.046 seconds
+[0m18:52:43.696186 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.699460 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null
+    );
+  
+  
+[0m18:52:43.710853 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m18:52:43.718461 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.720841 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+alter table "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp" rename to "stg_usuarios"
+[0m18:52:43.724372 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.728721 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: COMMIT
+[0m18:52:43.730984 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.733661 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: COMMIT
+[0m18:52:43.746526 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m18:52:43.752431 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:52:43.754701 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+drop table if exists "curso_dbt_duckdb"."main"."stg_usuarios__dbt_backup" cascade
+[0m18:52:43.757696 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.760944 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: Close
+[0m18:52:43.788215 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a89c80210>]}
+[0m18:52:43.790809 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.stg_usuarios ............................ [[32mOK[0m in 0.21s]
+[0m18:52:43.793170 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:52:43.795444 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_vendas
+[0m18:52:43.797707 [info ] [Thread-1 (]: 3 of 4 START sql table model main.stg_vendas ................................... [RUN]
+[0m18:52:43.800486 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_usuarios, now model.curso_dbt_duckdb.stg_vendas)
+[0m18:52:43.803706 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_vendas
+[0m18:52:43.810071 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.824273 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_vendas
+[0m18:52:43.830854 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.848575 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.850164 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: BEGIN
+[0m18:52:43.851733 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:52:43.874351 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m18:52:43.875882 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.876960 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas"
+    );
+  
+  
+[0m18:52:43.882175 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:52:43.886952 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.888352 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+alter table "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp" rename to "stg_vendas"
+[0m18:52:43.890221 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.894767 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: COMMIT
+[0m18:52:43.896445 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.898319 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: COMMIT
+[0m18:52:43.907462 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:52:43.912448 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:52:43.914654 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+drop table if exists "curso_dbt_duckdb"."main"."stg_vendas__dbt_backup" cascade
+[0m18:52:43.917120 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:52:43.920125 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: Close
+[0m18:52:43.952716 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a5edf12d0>]}
+[0m18:52:43.956442 [info ] [Thread-1 (]: 3 of 4 OK created sql table model main.stg_vendas .............................. [[32mOK[0m in 0.15s]
+[0m18:52:43.960023 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_vendas
+[0m18:52:43.964481 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:52:43.967410 [info ] [Thread-1 (]: 4 of 4 START sql table model main.fct_vendas_por_usuario ....................... [RUN]
+[0m18:52:43.970372 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_vendas, now model.curso_dbt_duckdb.fct_vendas_por_usuario)
+[0m18:52:43.973015 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:52:43.980210 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:52:44.018918 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:52:44.026341 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:52:44.060857 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:52:44.063028 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: BEGIN
+[0m18:52:44.065257 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:52:44.114486 [debug] [Thread-1 (]: SQL status: OK in 0.049 seconds
+[0m18:52:44.117993 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:52:44.121334 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.fct_vendas_por_usuario"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."fct_vendas_por_usuario__dbt_tmp"
+  
+    as (
+      with vendas as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_vendas"
+),
+usuarios as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_usuarios"
+)
+
+select
+  u.usuario_id,
+  u.nome,
+  count(v.venda_id)        as total_vendas,
+  sum(v.valor)             as receita_total,
+  min(v.data_venda)        as primeira_venda,
+  max(v.data_venda)        as ultima_venda
+from usuarios u
+left join vendas v
+  on u.usuario_id = v.usuario_id
+group by
+  u.usuario_id,
+  u.nome
+order by
+  receita_total desc;
+    );
+  
+  
+[0m18:52:44.139802 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.fct_vendas_por_usuario"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."fct_vendas_por_usuario__dbt_tmp"
+  
+    as (
+      with vendas as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_vendas"
+),
+usuarios as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_usuarios"
+)
+
+select
+  u.usuario_id,
+  u.nome,
+  count(v.venda_id)        as total_vendas,
+  sum(v.valor)             as receita_total,
+  min(v.data_venda)        as primeira_venda,
+  max(v.data_venda)        as ultima_venda
+from usuarios u
+left join vendas v
+  on u.usuario_id = v.usuario_id
+group by
+  u.usuario_id,
+  u.nome
+order by
+  receita_total desc;
+    );
+  
+  
+[0m18:52:44.144150 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m18:52:44.148316 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: ROLLBACK
+[0m18:52:44.174402 [debug] [Thread-1 (]: Failed to rollback 'model.curso_dbt_duckdb.fct_vendas_por_usuario'
+[0m18:52:44.179792 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: Close
+[0m18:52:44.198164 [debug] [Thread-1 (]: Runtime Error in model fct_vendas_por_usuario (models/marts/fct_vendas_por_usuario.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 34:   receita_total desc;
+                               ^
+[0m18:52:44.203458 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd8401f78-f9f2-40ef-941b-e6fd84d043c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a5edf3010>]}
+[0m18:52:44.209010 [error] [Thread-1 (]: 4 of 4 ERROR creating sql table model main.fct_vendas_por_usuario .............. [[31mERROR[0m in 0.23s]
+[0m18:52:44.213650 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:52:44.218270 [debug] [Thread-4 (]: Marking all children of 'model.curso_dbt_duckdb.fct_vendas_por_usuario' to be skipped because of status 'error'.  Reason: Runtime Error in model fct_vendas_por_usuario (models/marts/fct_vendas_por_usuario.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 34:   receita_total desc;
+                               ^.
+[0m18:52:44.228035 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:44.232373 [debug] [MainThread]: On master: BEGIN
+[0m18:52:44.235706 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:52:44.287505 [debug] [MainThread]: SQL status: OK in 0.052 seconds
+[0m18:52:44.290019 [debug] [MainThread]: On master: COMMIT
+[0m18:52:44.292855 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:52:44.295818 [debug] [MainThread]: On master: COMMIT
+[0m18:52:44.299651 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:52:44.302145 [debug] [MainThread]: On master: Close
+[0m18:52:44.309400 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:52:44.313007 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:52:44.316376 [debug] [MainThread]: Connection 'model.curso_dbt_duckdb.fct_vendas_por_usuario' was properly closed.
+[0m18:52:44.319804 [info ] [MainThread]: 
+[0m18:52:44.322040 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 1.48 seconds (1.48s).
+[0m18:52:44.326423 [debug] [MainThread]: Command end result
+[0m18:52:44.389988 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:52:44.396160 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:52:44.408678 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:52:44.410272 [info ] [MainThread]: 
+[0m18:52:44.411983 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m18:52:44.413454 [info ] [MainThread]: 
+[0m18:52:44.414935 [error] [MainThread]: [31mFailure in model fct_vendas_por_usuario (models/marts/fct_vendas_por_usuario.sql)[0m
+[0m18:52:44.416814 [error] [MainThread]:   Runtime Error in model fct_vendas_por_usuario (models/marts/fct_vendas_por_usuario.sql)
+  Parser Error: syntax error at or near ";"
+  
+  LINE 34:   receita_total desc;
+                               ^
+[0m18:52:44.418448 [info ] [MainThread]: 
+[0m18:52:44.420862 [info ] [MainThread]:   compiled code at target/compiled/curso_dbt_duckdb/models/marts/fct_vendas_por_usuario.sql
+[0m18:52:44.423090 [info ] [MainThread]: 
+[0m18:52:44.425690 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m18:52:44.429421 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.7012825, "process_in_blocks": "7568", "process_kernel_time": 0.341708, "process_mem_max_rss": "191104", "process_out_blocks": "0", "process_user_time": 2.782486}
+[0m18:52:44.432729 [debug] [MainThread]: Command `dbt run` failed at 18:52:44.432247 after 2.70 seconds
+[0m18:52:44.436170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a86f95210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a86f96d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a8b91d110>]}
+[0m18:52:44.440002 [debug] [MainThread]: Flushing usage events
+[0m18:52:45.146963 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:53:33.487356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385c94ee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385c94ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385cc51790>]}
+
+
+============================== 18:53:33.503198 | d4833640-4815-43b5-8ba6-7a60a6ab2849 ==============================
+[0m18:53:33.503198 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:53:33.506744 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'partial_parse': 'True', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'static_parser': 'True', 'introspect': 'True', 'use_colors': 'True', 'version_check': 'True', 'quiet': 'False', 'profiles_dir': '/usr/app/profiles', 'log_format': 'default', 'no_print': 'None', 'empty': 'None', 'invocation_command': 'dbt seed', 'write_json': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False'}
+[0m18:53:33.779609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3852d98c90>]}
+[0m18:53:33.843697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385f836c50>]}
+[0m18:53:33.846572 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:53:33.911321 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:53:34.327905 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:53:34.329822 [debug] [MainThread]: Partial parsing: updated file: curso_dbt_duckdb://models/marts/fct_vendas_por_usuario.sql
+[0m18:53:34.609468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385f5bac10>]}
+[0m18:53:34.728272 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:53:34.740992 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:53:34.780264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38511a3610>]}
+[0m18:53:34.782742 [info ] [MainThread]: Found 2 seeds, 4 models, 455 macros
+[0m18:53:34.785339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3852977150>]}
+[0m18:53:34.789896 [info ] [MainThread]: 
+[0m18:53:34.792144 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:53:34.794103 [info ] [MainThread]: 
+[0m18:53:34.796214 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:53:34.874823 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:53:34.916911 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:53:34.919521 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:53:34.921897 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:53:37.366098 [debug] [ThreadPool]: SQL status: OK in 2.444 seconds
+[0m18:53:37.369979 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:53:37.378424 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:53:37.381551 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:53:37.396109 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:37.399412 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:53:37.402399 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:53:37.445312 [debug] [ThreadPool]: SQL status: OK in 0.043 seconds
+[0m18:53:37.449197 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:37.451480 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:53:37.454078 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:53:37.456410 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:37.459323 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:53:37.462696 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:53:37.465479 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:53:37.467579 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:37.469907 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:53:37.473384 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:53:37.475825 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:53:37.484340 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:53:37.493683 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:53:37.496290 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:53:37.498223 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:53:37.553090 [debug] [ThreadPool]: SQL status: OK in 0.055 seconds
+[0m18:53:37.556688 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:53:37.559893 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:53:37.582098 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m18:53:37.586949 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:53:37.589996 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:53:37.592282 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:53:37.601876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3852990410>]}
+[0m18:53:37.604869 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:37.607997 [debug] [MainThread]: On master: BEGIN
+[0m18:53:37.610888 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:53:37.661765 [debug] [MainThread]: SQL status: OK in 0.051 seconds
+[0m18:53:37.665347 [debug] [MainThread]: On master: COMMIT
+[0m18:53:37.668411 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:37.671656 [debug] [MainThread]: On master: COMMIT
+[0m18:53:37.676775 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:53:37.681073 [debug] [MainThread]: On master: Close
+[0m18:53:37.701706 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.usuarios
+[0m18:53:37.705227 [info ] [Thread-1 (]: 1 of 2 START seed file main.usuarios ........................................... [RUN]
+[0m18:53:37.708741 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.curso_dbt_duckdb.usuarios'
+[0m18:53:37.711912 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.usuarios
+[0m18:53:37.714941 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.usuarios
+[0m18:53:37.786377 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:53:37.789528 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: BEGIN
+[0m18:53:37.792934 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:53:37.866787 [debug] [Thread-1 (]: SQL status: OK in 0.074 seconds
+[0m18:53:37.871057 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:53:37.875519 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.usuarios"} */
+truncate table "curso_dbt_duckdb"."main"."usuarios"
+[0m18:53:37.882199 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:53:37.909100 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:53:37.911992 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: 
+          COPY "curso_dbt_duckdb"."main"."usuarios" FROM '/usr/app/seeds/usuarios.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:53:37.944107 [debug] [Thread-1 (]: SQL status: OK in 0.029 seconds
+[0m18:53:37.958272 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.usuarios"
+[0m18:53:38.011341 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:53:38.014407 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.usuarios"
+[0m18:53:38.016680 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: COMMIT
+[0m18:53:38.035939 [debug] [Thread-1 (]: SQL status: OK in 0.017 seconds
+[0m18:53:38.042024 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.usuarios: Close
+[0m18:53:38.095584 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385112e450>]}
+[0m18:53:38.098585 [info ] [Thread-1 (]: 1 of 2 OK loaded seed file main.usuarios ....................................... [[32mINSERT 6[0m in 0.38s]
+[0m18:53:38.101511 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.usuarios
+[0m18:53:38.104197 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.vendas
+[0m18:53:38.106894 [info ] [Thread-1 (]: 2 of 2 START seed file main.vendas ............................................. [RUN]
+[0m18:53:38.108798 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.usuarios, now seed.curso_dbt_duckdb.vendas)
+[0m18:53:38.111133 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.vendas
+[0m18:53:38.113573 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.vendas
+[0m18:53:38.135961 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:53:38.138559 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: BEGIN
+[0m18:53:38.141423 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:53:38.178992 [debug] [Thread-1 (]: SQL status: OK in 0.037 seconds
+[0m18:53:38.181576 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:53:38.183910 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "seed.curso_dbt_duckdb.vendas"} */
+truncate table "curso_dbt_duckdb"."main"."vendas"
+[0m18:53:38.187591 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:38.192003 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:53:38.194665 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: 
+          COPY "curso_dbt_duckdb"."main"."vendas" FROM '/usr/app/seeds/vendas.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m18:53:38.225383 [debug] [Thread-1 (]: SQL status: OK in 0.028 seconds
+[0m18:53:38.230514 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.curso_dbt_duckdb.vendas"
+[0m18:53:38.269935 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:53:38.274875 [debug] [Thread-1 (]: Using duckdb connection "seed.curso_dbt_duckdb.vendas"
+[0m18:53:38.278868 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: COMMIT
+[0m18:53:38.302127 [debug] [Thread-1 (]: SQL status: OK in 0.020 seconds
+[0m18:53:38.306944 [debug] [Thread-1 (]: On seed.curso_dbt_duckdb.vendas: Close
+[0m18:53:38.355248 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4833640-4815-43b5-8ba6-7a60a6ab2849', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385298edd0>]}
+[0m18:53:38.358095 [info ] [Thread-1 (]: 2 of 2 OK loaded seed file main.vendas ......................................... [[32mINSERT 7[0m in 0.25s]
+[0m18:53:38.360403 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.vendas
+[0m18:53:38.364685 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:38.366739 [debug] [MainThread]: On master: BEGIN
+[0m18:53:38.368760 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:53:38.420500 [debug] [MainThread]: SQL status: OK in 0.052 seconds
+[0m18:53:38.424420 [debug] [MainThread]: On master: COMMIT
+[0m18:53:38.427570 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:38.431364 [debug] [MainThread]: On master: COMMIT
+[0m18:53:38.436154 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:53:38.440166 [debug] [MainThread]: On master: Close
+[0m18:53:38.450148 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:53:38.453281 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:53:38.456067 [debug] [MainThread]: Connection 'seed.curso_dbt_duckdb.vendas' was properly closed.
+[0m18:53:38.459014 [info ] [MainThread]: 
+[0m18:53:38.461668 [info ] [MainThread]: Finished running 2 seeds in 0 hours 0 minutes and 3.66 seconds (3.66s).
+[0m18:53:38.465477 [debug] [MainThread]: Command end result
+[0m18:53:38.549219 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:53:38.562855 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:53:38.579637 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:53:38.581844 [info ] [MainThread]: 
+[0m18:53:38.584344 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:53:38.586846 [info ] [MainThread]: 
+[0m18:53:38.588504 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:53:38.592095 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 5.22645, "process_in_blocks": "0", "process_kernel_time": 0.531414, "process_mem_max_rss": "302380", "process_out_blocks": "140824", "process_user_time": 3.710058}
+[0m18:53:38.594375 [debug] [MainThread]: Command `dbt seed` succeeded at 18:53:38.594197 after 5.23 seconds
+[0m18:53:38.596217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385cc517d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385c94fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f385c94d610>]}
+[0m18:53:38.598104 [debug] [MainThread]: Flushing usage events
+[0m18:53:39.186083 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:53:40.957103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd899630c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd899998b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8999991d0>]}
+
+
+============================== 18:53:40.962688 | 1135e8ea-1058-4f43-83eb-ad0ee32cc433 ==============================
+[0m18:53:40.962688 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:53:40.965330 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'partial_parse': 'True', 'introspect': 'True', 'log_path': '/usr/app/logs', 'static_parser': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'write_json': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'target_path': 'None', 'profiles_dir': '/usr/app/profiles', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'fail_fast': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None'}
+[0m18:53:41.214882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd899db7f10>]}
+[0m18:53:41.297404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd89c59c1d0>]}
+[0m18:53:41.300978 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:53:41.384159 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:53:41.645267 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:53:41.646913 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:53:41.647742 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:53:41.687148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88f89a0d0>]}
+[0m18:53:41.823567 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:53:41.838617 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:53:41.870923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88f82e210>]}
+[0m18:53:41.873506 [info ] [MainThread]: Found 2 seeds, 4 models, 455 macros
+[0m18:53:41.875415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd899657350>]}
+[0m18:53:41.879693 [info ] [MainThread]: 
+[0m18:53:41.882286 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:53:41.884761 [info ] [MainThread]: 
+[0m18:53:41.887920 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:53:41.899045 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb'
+[0m18:53:41.938529 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb"
+[0m18:53:41.941118 [debug] [ThreadPool]: On list_curso_dbt_duckdb: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"curso_dbt_duckdb"'
+    
+  
+  
+[0m18:53:41.943639 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:53:41.987769 [debug] [ThreadPool]: SQL status: OK in 0.044 seconds
+[0m18:53:41.991271 [debug] [ThreadPool]: On list_curso_dbt_duckdb: Close
+[0m18:53:42.000194 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb, now create_curso_dbt_duckdb_main)
+[0m18:53:42.003328 [debug] [ThreadPool]: Creating schema "database: "curso_dbt_duckdb"
+schema: "main"
+"
+[0m18:53:42.011697 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:42.013992 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='curso_dbt_duckdb'
+        and type='sqlite'
+    
+  
+[0m18:53:42.016036 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:53:42.055744 [debug] [ThreadPool]: SQL status: OK in 0.040 seconds
+[0m18:53:42.060283 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:42.063219 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: BEGIN
+[0m18:53:42.067144 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:53:42.070211 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:42.073096 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "create_curso_dbt_duckdb_main"} */
+
+    
+    
+        create schema if not exists "curso_dbt_duckdb"."main"
+    
+[0m18:53:42.076856 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:53:42.081085 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:53:42.084222 [debug] [ThreadPool]: Using duckdb connection "create_curso_dbt_duckdb_main"
+[0m18:53:42.087036 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: COMMIT
+[0m18:53:42.090809 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:53:42.094034 [debug] [ThreadPool]: On create_curso_dbt_duckdb_main: Close
+[0m18:53:42.105351 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso_dbt_duckdb_main, now list_curso_dbt_duckdb_main)
+[0m18:53:42.119038 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:53:42.121673 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:53:42.124098 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:53:42.167050 [debug] [ThreadPool]: SQL status: OK in 0.043 seconds
+[0m18:53:42.170077 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:53:42.172905 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:53:42.188097 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m18:53:42.191058 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:53:42.192975 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:53:42.194563 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:53:42.200308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88faf3d90>]}
+[0m18:53:42.202066 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:42.203356 [debug] [MainThread]: On master: BEGIN
+[0m18:53:42.204612 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:53:42.225713 [debug] [MainThread]: SQL status: OK in 0.021 seconds
+[0m18:53:42.227919 [debug] [MainThread]: On master: COMMIT
+[0m18:53:42.229286 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:42.231375 [debug] [MainThread]: On master: COMMIT
+[0m18:53:42.232865 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:53:42.234084 [debug] [MainThread]: On master: Close
+[0m18:53:42.240857 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.01_hello_world
+[0m18:53:42.242794 [info ] [Thread-1 (]: 1 of 4 START sql table model main.01_hello_world ............................... [RUN]
+[0m18:53:42.244523 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.curso_dbt_duckdb.01_hello_world'
+[0m18:53:42.246218 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.01_hello_world
+[0m18:53:42.256574 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.273573 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.01_hello_world
+[0m18:53:42.378602 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.397771 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.399603 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: BEGIN
+[0m18:53:42.401784 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:53:42.439845 [debug] [Thread-1 (]: SQL status: OK in 0.038 seconds
+[0m18:53:42.443706 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.446724 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp"
+  
+    as (
+      select
+  'Hello dbt + DuckDB' as message,
+  current_timestamp as created_at
+    );
+  
+  
+[0m18:53:42.451910 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:53:42.468249 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.471996 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+alter table "curso_dbt_duckdb"."main"."01_hello_world" rename to "01_hello_world__dbt_backup"
+[0m18:53:42.475702 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.483993 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.486455 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+alter table "curso_dbt_duckdb"."main"."01_hello_world__dbt_tmp" rename to "01_hello_world"
+[0m18:53:42.490125 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.520266 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: COMMIT
+[0m18:53:42.522940 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.525016 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: COMMIT
+[0m18:53:42.539886 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m18:53:42.549859 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.01_hello_world"
+[0m18:53:42.552421 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.01_hello_world"} */
+drop table if exists "curso_dbt_duckdb"."main"."01_hello_world__dbt_backup" cascade
+[0m18:53:42.560139 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:53:42.565739 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.01_hello_world: Close
+[0m18:53:42.600043 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88d4cb390>]}
+[0m18:53:42.602801 [info ] [Thread-1 (]: 1 of 4 OK created sql table model main.01_hello_world .......................... [[32mOK[0m in 0.35s]
+[0m18:53:42.605897 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.01_hello_world
+[0m18:53:42.608505 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:53:42.611303 [info ] [Thread-1 (]: 2 of 4 START sql table model main.stg_usuarios ................................. [RUN]
+[0m18:53:42.614023 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.01_hello_world, now model.curso_dbt_duckdb.stg_usuarios)
+[0m18:53:42.616307 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_usuarios
+[0m18:53:42.621840 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.641580 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_usuarios
+[0m18:53:42.648217 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.669713 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.671538 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: BEGIN
+[0m18:53:42.673781 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:53:42.709853 [debug] [Thread-1 (]: SQL status: OK in 0.036 seconds
+[0m18:53:42.711826 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.713770 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)        as usuario_id,
+  nome,
+  email,
+  cast(created_at as timestamp) as created_at
+from "curso_dbt_duckdb"."main"."usuarios"
+where email is not null
+    );
+  
+  
+[0m18:53:42.722518 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:53:42.730681 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.733768 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+alter table "curso_dbt_duckdb"."main"."stg_usuarios" rename to "stg_usuarios__dbt_backup"
+[0m18:53:42.737934 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.746730 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.749768 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+alter table "curso_dbt_duckdb"."main"."stg_usuarios__dbt_tmp" rename to "stg_usuarios"
+[0m18:53:42.753866 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.758945 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: COMMIT
+[0m18:53:42.762453 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.765319 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: COMMIT
+[0m18:53:42.783938 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m18:53:42.791602 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:53:42.795338 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_usuarios"} */
+drop table if exists "curso_dbt_duckdb"."main"."stg_usuarios__dbt_backup" cascade
+[0m18:53:42.805148 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:53:42.810232 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_usuarios: Close
+[0m18:53:42.845226 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88d308c10>]}
+[0m18:53:42.847613 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.stg_usuarios ............................ [[32mOK[0m in 0.23s]
+[0m18:53:42.850032 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:53:42.852202 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_vendas
+[0m18:53:42.854533 [info ] [Thread-1 (]: 3 of 4 START sql table model main.stg_vendas ................................... [RUN]
+[0m18:53:42.856988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_usuarios, now model.curso_dbt_duckdb.stg_vendas)
+[0m18:53:42.859139 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_vendas
+[0m18:53:42.865306 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.885667 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_vendas
+[0m18:53:42.894810 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.915094 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.917111 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: BEGIN
+[0m18:53:42.918492 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:53:42.949560 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:53:42.952298 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.954389 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp"
+  
+    as (
+      select
+  cast(id as integer)          as venda_id,
+  cast(usuario_id as integer)  as usuario_id,
+  cast(valor as double)        as valor,
+  cast(data_venda as date)     as data_venda
+from "curso_dbt_duckdb"."main"."vendas"
+    );
+  
+  
+[0m18:53:42.963346 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:53:42.968621 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.970418 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+alter table "curso_dbt_duckdb"."main"."stg_vendas" rename to "stg_vendas__dbt_backup"
+[0m18:53:42.973582 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.981201 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.983887 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+alter table "curso_dbt_duckdb"."main"."stg_vendas__dbt_tmp" rename to "stg_vendas"
+[0m18:53:42.986884 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:42.990172 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: COMMIT
+[0m18:53:42.992205 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:42.994601 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: COMMIT
+[0m18:53:43.034282 [debug] [Thread-1 (]: SQL status: OK in 0.037 seconds
+[0m18:53:43.041855 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.stg_vendas"
+[0m18:53:43.044915 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.stg_vendas"} */
+drop table if exists "curso_dbt_duckdb"."main"."stg_vendas__dbt_backup" cascade
+[0m18:53:43.051597 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:53:43.055230 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.stg_vendas: Close
+[0m18:53:43.091619 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88d3ef3d0>]}
+[0m18:53:43.094888 [info ] [Thread-1 (]: 3 of 4 OK created sql table model main.stg_vendas .............................. [[32mOK[0m in 0.23s]
+[0m18:53:43.097484 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_vendas
+[0m18:53:43.100447 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:53:43.103149 [info ] [Thread-1 (]: 4 of 4 START sql table model main.fct_vendas_por_usuario ....................... [RUN]
+[0m18:53:43.106149 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_vendas, now model.curso_dbt_duckdb.fct_vendas_por_usuario)
+[0m18:53:43.108487 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:53:43.115768 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.135031 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:53:43.140396 [debug] [Thread-1 (]: Writing runtime sql for node "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.163045 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.165195 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: BEGIN
+[0m18:53:43.167051 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:53:43.204867 [debug] [Thread-1 (]: SQL status: OK in 0.038 seconds
+[0m18:53:43.207406 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.210160 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.fct_vendas_por_usuario"} */
+
+  
+    
+    
+
+    create  table
+      "curso_dbt_duckdb"."main"."fct_vendas_por_usuario__dbt_tmp"
+  
+    as (
+      with vendas as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_vendas"
+),
+usuarios as (
+  select *
+  from "curso_dbt_duckdb"."main"."stg_usuarios"
+)
+
+select
+  u.usuario_id,
+  u.nome,
+  count(v.venda_id)        as total_vendas,
+  sum(v.valor)             as receita_total,
+  min(v.data_venda)        as primeira_venda,
+  max(v.data_venda)        as ultima_venda
+from usuarios u
+left join vendas v
+  on u.usuario_id = v.usuario_id
+group by
+  u.usuario_id,
+  u.nome
+order by
+  receita_total desc
+    );
+  
+  
+[0m18:53:43.244102 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:53:43.251542 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.254384 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.fct_vendas_por_usuario"} */
+alter table "curso_dbt_duckdb"."main"."fct_vendas_por_usuario__dbt_tmp" rename to "fct_vendas_por_usuario"
+[0m18:53:43.258574 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:53:43.263056 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: COMMIT
+[0m18:53:43.265601 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.267777 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: COMMIT
+[0m18:53:43.282799 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m18:53:43.289393 [debug] [Thread-1 (]: Using duckdb connection "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:53:43.291910 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "node_id": "model.curso_dbt_duckdb.fct_vendas_por_usuario"} */
+drop table if exists "curso_dbt_duckdb"."main"."fct_vendas_por_usuario__dbt_backup" cascade
+[0m18:53:43.295290 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:53:43.298622 [debug] [Thread-1 (]: On model.curso_dbt_duckdb.fct_vendas_por_usuario: Close
+[0m18:53:43.338101 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1135e8ea-1058-4f43-83eb-ad0ee32cc433', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88d355950>]}
+[0m18:53:43.341142 [info ] [Thread-1 (]: 4 of 4 OK created sql table model main.fct_vendas_por_usuario .................. [[32mOK[0m in 0.23s]
+[0m18:53:43.343883 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:53:43.348733 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:43.351248 [debug] [MainThread]: On master: BEGIN
+[0m18:53:43.353807 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:53:43.384383 [debug] [MainThread]: SQL status: OK in 0.030 seconds
+[0m18:53:43.386800 [debug] [MainThread]: On master: COMMIT
+[0m18:53:43.388907 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:53:43.391000 [debug] [MainThread]: On master: COMMIT
+[0m18:53:43.394482 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:53:43.396768 [debug] [MainThread]: On master: Close
+[0m18:53:43.401660 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:53:43.403745 [debug] [MainThread]: Connection 'list_curso_dbt_duckdb_main' was properly closed.
+[0m18:53:43.405372 [debug] [MainThread]: Connection 'model.curso_dbt_duckdb.fct_vendas_por_usuario' was properly closed.
+[0m18:53:43.407041 [info ] [MainThread]: 
+[0m18:53:43.409125 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 1.52 seconds (1.52s).
+[0m18:53:43.412260 [debug] [MainThread]: Command end result
+[0m18:53:43.481766 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:53:43.494058 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:53:43.511916 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:53:43.514240 [info ] [MainThread]: 
+[0m18:53:43.516168 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:53:43.518416 [info ] [MainThread]: 
+[0m18:53:43.520450 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m18:53:43.523329 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.6785328, "process_in_blocks": "4304", "process_kernel_time": 0.363479, "process_mem_max_rss": "205652", "process_out_blocks": "0", "process_user_time": 2.50506}
+[0m18:53:43.525388 [debug] [MainThread]: Command `dbt run` succeeded at 18:53:43.525264 after 2.68 seconds
+[0m18:53:43.527370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd88d410450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd89dfe4690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd89dfe5110>]}
+[0m18:53:43.529313 [debug] [MainThread]: Flushing usage events
+[0m18:53:44.267678 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:54:32.835054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ab9894ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ab98c7c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ab98c58d0>]}
+
+
+============================== 18:54:32.843835 | 8783e682-a92f-4c90-9c93-7e80ebaa63ba ==============================
+[0m18:54:32.843835 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:54:32.847182 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt docs generate', 'profiles_dir': '/usr/app/profiles', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'log_format': 'default', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_path': '/usr/app/logs', 'write_json': 'True', 'use_colors': 'True', 'empty': 'None', 'quiet': 'False', 'target_path': 'None', 'version_check': 'True', 'log_cache_events': 'False'}
+[0m18:54:33.379062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ab98705d0>]}
+[0m18:54:33.459874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3abc818ad0>]}
+[0m18:54:33.463575 [info ] [MainThread]: Registered adapter: duckdb=1.8.1
+[0m18:54:33.550820 [debug] [MainThread]: checksum: 092b177ba87eb6bb3c55954c38aa57900eebac336561eb9ee32218428aa81d43, vars: {}, profile: , target: , version: 1.11.4
+[0m18:54:33.909471 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:54:33.911989 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:54:33.914184 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:54:33.959750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ab98c6150>]}
+[0m18:54:34.046547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3aafb6a890>]}
+[0m18:54:34.049511 [info ] [MainThread]: Found 2 seeds, 4 models, 455 macros
+[0m18:54:34.051479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3aafc014d0>]}
+[0m18:54:34.055542 [info ] [MainThread]: 
+[0m18:54:34.057342 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:54:34.058717 [info ] [MainThread]: 
+[0m18:54:34.060237 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:54:34.068456 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_curso_dbt_duckdb_main'
+[0m18:54:34.165248 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:54:34.167241 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: BEGIN
+[0m18:54:34.168646 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:34.230833 [debug] [ThreadPool]: SQL status: OK in 0.062 seconds
+[0m18:54:34.233718 [debug] [ThreadPool]: Using duckdb connection "list_curso_dbt_duckdb_main"
+[0m18:54:34.236084 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "list_curso_dbt_duckdb_main"} */
+select
+      'curso_dbt_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'curso_dbt_duckdb'
+  
+[0m18:54:34.279664 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m18:54:34.284980 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: ROLLBACK
+[0m18:54:34.289972 [debug] [ThreadPool]: Failed to rollback 'list_curso_dbt_duckdb_main'
+[0m18:54:34.292892 [debug] [ThreadPool]: On list_curso_dbt_duckdb_main: Close
+[0m18:54:34.306058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8783e682-a92f-4c90-9c93-7e80ebaa63ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3aafb2d850>]}
+[0m18:54:34.316916 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.01_hello_world
+[0m18:54:34.320761 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_curso_dbt_duckdb_main, now model.curso_dbt_duckdb.01_hello_world)
+[0m18:54:34.324237 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.01_hello_world
+[0m18:54:34.340840 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.01_hello_world"
+[0m18:54:34.353428 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.01_hello_world
+[0m18:54:34.356647 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.01_hello_world
+[0m18:54:34.358172 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.usuarios
+[0m18:54:34.359250 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.01_hello_world, now seed.curso_dbt_duckdb.usuarios)
+[0m18:54:34.360246 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.usuarios
+[0m18:54:34.363706 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.usuarios
+[0m18:54:34.365577 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.usuarios
+[0m18:54:34.366824 [debug] [Thread-1 (]: Began running node seed.curso_dbt_duckdb.vendas
+[0m18:54:34.368072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.usuarios, now seed.curso_dbt_duckdb.vendas)
+[0m18:54:34.369126 [debug] [Thread-1 (]: Began compiling node seed.curso_dbt_duckdb.vendas
+[0m18:54:34.372344 [debug] [Thread-1 (]: Began executing node seed.curso_dbt_duckdb.vendas
+[0m18:54:34.373991 [debug] [Thread-1 (]: Finished running node seed.curso_dbt_duckdb.vendas
+[0m18:54:34.375359 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:54:34.376880 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.curso_dbt_duckdb.vendas, now model.curso_dbt_duckdb.stg_usuarios)
+[0m18:54:34.378007 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_usuarios
+[0m18:54:34.382027 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_usuarios"
+[0m18:54:34.392456 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_usuarios
+[0m18:54:34.394684 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_usuarios
+[0m18:54:34.395927 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.stg_vendas
+[0m18:54:34.397387 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_usuarios, now model.curso_dbt_duckdb.stg_vendas)
+[0m18:54:34.398617 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.stg_vendas
+[0m18:54:34.402658 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.stg_vendas"
+[0m18:54:34.416179 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.stg_vendas
+[0m18:54:34.418680 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.stg_vendas
+[0m18:54:34.421926 [debug] [Thread-1 (]: Began running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:54:34.424548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.curso_dbt_duckdb.stg_vendas, now model.curso_dbt_duckdb.fct_vendas_por_usuario)
+[0m18:54:34.426907 [debug] [Thread-1 (]: Began compiling node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:54:34.432997 [debug] [Thread-1 (]: Writing injected SQL for node "model.curso_dbt_duckdb.fct_vendas_por_usuario"
+[0m18:54:34.463128 [debug] [Thread-1 (]: Began executing node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:54:34.466761 [debug] [Thread-1 (]: Finished running node model.curso_dbt_duckdb.fct_vendas_por_usuario
+[0m18:54:34.472493 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:54:34.475374 [debug] [MainThread]: Connection 'model.curso_dbt_duckdb.fct_vendas_por_usuario' was properly closed.
+[0m18:54:34.479286 [debug] [MainThread]: Command end result
+[0m18:54:34.696055 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:54:34.707792 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:54:34.730914 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:54:34.780296 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m18:54:34.782515 [info ] [MainThread]: Building catalog
+[0m18:54:34.794020 [debug] [ThreadPool]: Acquiring new duckdb connection 'curso_dbt_duckdb.information_schema'
+[0m18:54:34.806722 [debug] [ThreadPool]: Using duckdb connection "curso_dbt_duckdb.information_schema"
+[0m18:54:34.809398 [debug] [ThreadPool]: On curso_dbt_duckdb.information_schema: BEGIN
+[0m18:54:34.811438 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:34.853234 [debug] [ThreadPool]: SQL status: OK in 0.042 seconds
+[0m18:54:34.855860 [debug] [ThreadPool]: Using duckdb connection "curso_dbt_duckdb.information_schema"
+[0m18:54:34.858055 [debug] [ThreadPool]: On curso_dbt_duckdb.information_schema: /* {"app": "dbt", "dbt_version": "1.11.4", "profile_name": "curso_dbt_duckdb", "target_name": "dev", "connection_name": "curso_dbt_duckdb.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'curso_dbt_duckdb'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'curso_dbt_duckdb'
+    )
+    select
+        'curso_dbt_duckdb' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        '' as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m18:54:34.888028 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m18:54:34.893423 [debug] [ThreadPool]: On curso_dbt_duckdb.information_schema: ROLLBACK
+[0m18:54:34.896632 [debug] [ThreadPool]: Failed to rollback 'curso_dbt_duckdb.information_schema'
+[0m18:54:34.899030 [debug] [ThreadPool]: On curso_dbt_duckdb.information_schema: Close
+[0m18:54:34.929443 [debug] [MainThread]: Wrote artifact CatalogArtifact to /usr/app/target/catalog.json
+[0m18:54:35.000946 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:54:35.012336 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:54:35.014074 [info ] [MainThread]: Catalog written to /usr/app/target/catalog.json
+[0m18:54:35.018150 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 2.2959545, "process_in_blocks": "172968", "process_kernel_time": 0.568582, "process_mem_max_rss": "186984", "process_out_blocks": "0", "process_user_time": 2.997106}
+[0m18:54:35.020143 [debug] [MainThread]: Command `dbt docs generate` succeeded at 18:54:35.019966 after 2.30 seconds
+[0m18:54:35.022076 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m18:54:35.023610 [debug] [MainThread]: Connection 'curso_dbt_duckdb.information_schema' was properly closed.
+[0m18:54:35.025631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3abe2504d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3abc9698d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3abe3c56d0>]}
+[0m18:54:35.027466 [debug] [MainThread]: Flushing usage events
+[0m18:54:35.596942 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:54:37.724260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c0f11d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c153b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c1515d0>]}
+
+
+============================== 18:54:37.729916 | 01e14904-d9a8-495a-b1a2-4c12f13cb4c8 ==============================
+[0m18:54:37.729916 [info ] [MainThread]: Running with dbt=1.11.4
+[0m18:54:37.732478 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'profiles_dir': '/usr/app/profiles', 'debug': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'warn_error': 'None', 'no_print': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'write_json': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt docs serve --host 0.0.0.0 --port 8080', 'printer_width': '80', 'use_colors': 'True', 'empty': 'None', 'log_path': '/usr/app/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m18:54:37.993210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '01e14904-d9a8-495a-b1a2-4c12f13cb4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c1a5610>]}
+[0m18:54:38.082936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '01e14904-d9a8-495a-b1a2-4c12f13cb4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494f074f50>]}
+[0m22:11:30.402085 [error] [MainThread]: Encountered an error:
+
+[0m22:11:30.461862 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/local/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m22:11:30.495533 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 11812.932, "process_in_blocks": "5072", "process_kernel_time": 0.98915, "process_mem_max_rss": "168336", "process_out_blocks": "192", "process_user_time": 4.136728}
+[0m22:11:30.506399 [debug] [MainThread]: Command `dbt docs serve` failed at 22:11:30.505040 after 11812.95 seconds
+[0m22:11:30.518649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c161b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c1634d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f494c0f04d0>]}
+[0m22:11:30.527778 [debug] [MainThread]: Flushing usage events

@@ -3,7 +3,8 @@ curso_dbt_duckdb:
   outputs:
     dev:
       type: duckdb
-      path: /usr/app/data/curso_dbt_duckdb.duckdb
+      # arquivo do banco duckdb dentro do próprio diretório de trabalho /usr/app
+      path: /usr/app/curso_dbt_duckdb.duckdb
       threads: 1
       schema: main
       extensions:

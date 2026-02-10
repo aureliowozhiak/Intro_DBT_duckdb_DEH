@@ -21,6 +21,6 @@ group by
   u.usuario_id,
   u.nome
 order by
-  receita_total desc;
+  receita_total desc
 
 
